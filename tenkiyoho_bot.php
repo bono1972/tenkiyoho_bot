@@ -5,11 +5,12 @@ require (__DIR__ ."/twitteroauth/autoload.php");
 use Abraham\TwitterOAuth\TwitterOAuth;
 //天候取得クラス読み込み
 require (__DIR__ ."/cls_liveWeather.php");
+//設定ファイル読み込み
 require (__DIR__ ."/credentials.php");
 //ユーザーID
 $user = "your TwitterID";
 
-//接続
+//接続。それぞれのKEYを設定ファイルにdifineで定数化してある。
 $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
 
 $sID = LoadID();//since_id読み込み
